@@ -18,7 +18,7 @@ export class ProveedoresComponent implements OnInit {
 
 
   ngOnInit() {
-    this.proveedores = this.proveedoresService.getProveedores();
+     this.proveedores = this.proveedoresService.getProveedores();
   }
 
 }

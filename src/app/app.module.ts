@@ -8,11 +8,16 @@ import { InicioComponent } from './inicio/inicio.component';
 import { HeaderComponent } from './header/header.component';
 import { AddproveedorComponent } from './proveedores/addproveedor/addproveedor.component';
 import { FormsModule } from '@angular/forms';
+import { AddpresupuestoComponent } from './proveedores/addpresupuesto/addpresupuesto.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 const routes: Routes = [
     { path: '', component: InicioComponent },
     { path: 'proveedores', component: ProveedoresComponent },
     { path: 'addproveedor', component: AddproveedorComponent },
+    { path: 'addpresupuesto', component: AddpresupuestoComponent },
     { path: '**', component: InicioComponent }
   ];
 
@@ -22,12 +27,14 @@ const routes: Routes = [
     ProveedoresComponent,
     InicioComponent,
     HeaderComponent,
-    AddproveedorComponent
+    AddproveedorComponent,
+    AddpresupuestoComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ProveedoresService],
   bootstrap: [AppComponent]
